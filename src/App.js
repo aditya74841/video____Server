@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+
+// eslint-disable-next-line
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import SignIn from './components/Form/SignIn/SignIn'
+
+import SignUp from './components/Form/SignUp/SignUp'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Routes>
+        <Route exact path="/signIn" element={<SignIn />} />
+        <Route exact path="/signUp" element={<SignUp />} />
+
+      </Routes>
+    </React.Fragment>
   );
 }
 
